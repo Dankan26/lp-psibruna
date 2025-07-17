@@ -18,18 +18,32 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id=GTM-WGSB4TNQ';f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-WGSB4TNQ');
-            `
-          }}
-        />
-      </head>
+  {/* GTM */}
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id=GTM-WGSB4TNQ';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WGSB4TNQ');
+      `
+    }}
+  />
+  {/* Google Analytics */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJKS92D4HE"></script>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KJKS92D4HE');
+      `
+    }}
+  />
+</head>
+
       <body className={inter.className}>
         <noscript>
           <iframe
