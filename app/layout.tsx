@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Bruna Lavalle - Psicóloga',
+  description: 'Psicóloga especializada em saúde emocional, autoestima e relacionamentos.',
   generator: 'v0.dev',
 }
 
