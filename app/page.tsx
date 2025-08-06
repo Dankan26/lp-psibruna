@@ -430,8 +430,7 @@ export default function DraBrunaLanding() {
                 novas formas de lidar com eles.
               </p>
               <p>
-                Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática e eficaz no tratamento da
-                ansiedade, dos medos e dos conflitos em relacionamentos.
+                Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática, científica e eficaz no tratamento da ansiedade, da depressão, fobias e no desenvolvimento de comportamentos para lidar com os conflitos em todos os tipos de relacionamentos.
               </p>
               <p>
                 Juntas, vamos identificar os padrões que te machucam, reorganizar pensamentos e construir caminhos mais
@@ -597,7 +596,7 @@ export default function DraBrunaLanding() {
               },
               {
                 icon: "/images/experiencia-icon.png",
-                title: "Mais de 7 anos de experiência",
+                title: "Mais de 10 anos de experiência",
                 description: "Histórico sólido de transformação na vida de adultos e idosos.",
               },
               {
@@ -667,7 +666,7 @@ export default function DraBrunaLanding() {
                   Com mais de 10 anos de experiência, ofereço um atendimento acolhedor, personalizado e seguro — um
                   espaço para você ser quem é, descobrir quem quer ser e viver em harmonia com a sua própria história.
                 </p>
-                <p>Psicologia em Brasília e online, para você que busca equilíbrio emocional e bem-estar.</p>
+                <p>Atendimento em psicoterapia online, para você que busca equilíbrio emocional e bem-estar.</p>
               </div>
             </div>
 
