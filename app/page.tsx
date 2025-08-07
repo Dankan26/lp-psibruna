@@ -82,29 +82,7 @@ export default function DraBrunaLanding() {
     document.head.removeChild(script)
   }
 }, []) // ⬅️ Feche aqui o primeiro useEffect!
-useEffect(() => {
-  const tryInitElfsight = () => {
-    if (typeof window !== 'undefined' && window.ElfsightWidget) {
-      window.ElfsightWidget.init();
-    }
-  };
-
-  // Tenta iniciar imediatamente
-  tryInitElfsight();
-
-  // Se não conseguir, tenta por até 10 vezes com intervalo de 500ms
-  let retries = 0;
-  const interval = setInterval(() => {
-    retries++;
-    tryInitElfsight();
-
-    if (retries > 10 || (window.ElfsightWidget && window.ElfsightWidget.init)) {
-      clearInterval(interval);
-    }
-  }, 500);
-
-  return () => clearInterval(interval);
-}, []);
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
