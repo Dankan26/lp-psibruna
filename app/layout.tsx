@@ -28,7 +28,12 @@ export default function RootLayout({
           }
         `}</style>
 {/* Elfsight google avaliação */}
-<script src="https://static.elfsight.com/platform/platform.js" defer></script>
+<script
+  src="https://static.elfsight.com/platform/platform.js"
+  data-use-service-core
+  defer
+></script>
+
 
         {/* Google Tag Manager */}
         <script
