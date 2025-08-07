@@ -29,7 +29,18 @@ export default function RootLayout({
         `}</style>
 
         {/* Elfsight - Google Reviews */}
-        <script async src="https://static.elfsight.com/platform/platform.js"></script>
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function () {
+        var s = document.createElement("script");
+        s.src = "https://static.elfsight.com/platform/platform.js";
+        s.defer = true;
+        document.head.appendChild(s);
+      })();
+    `,
+  }}
+></script>
 
         {/* Google Tag Manager */}
         <script
