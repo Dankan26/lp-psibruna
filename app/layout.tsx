@@ -27,20 +27,8 @@ export default function RootLayout({
             --font-mono: ${GeistMono.variable};
           }
         `}</style>
-
-        {/* Elfsight - Google Reviews */}
-        <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function () {
-        var s = document.createElement("script");
-        s.src = "https://static.elfsight.com/platform/platform.js";
-        s.defer = true;
-        document.head.appendChild(s);
-      })();
-    `,
-  }}
-></script>
+{/* Elfsight google avaliação */}
+<script src="https://static.elfsight.com/platform/platform.js" defer></script>
 
         {/* Google Tag Manager */}
         <script
