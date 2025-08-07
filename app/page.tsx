@@ -74,83 +74,14 @@ export default function DraBrunaLanding() {
     const script = document.createElement("script")
     script.type = "application/ld+json"
     script.text = JSON.stringify(structuredData)
-    document.head.appendChild(script)
-
-useEffect(() => {
-  // Set page title and meta description
-  document.title = "Dra. Bruna Lavalle - Psicóloga Clínica | TCC em Brasília e Online"
-
-  const metaDescription = document.querySelector('meta[name="description"]')
-  if (metaDescription) {
-    metaDescription.setAttribute(
-      "content",
-      "Psicóloga especializada em TCC para ansiedade, depressão e relacionamentos. Atendimento presencial em Brasília e online. Agende sua consulta.",
-    )
-  }
-
-  // Add Open Graph tags
-  const ogTags = [
-    { property: "og:title", content: "Dra. Bruna Lavalle - Psicóloga Clínica" },
-    { property: "og:description", content: "Atendimento psicológico especializado em TCC" },
-    { property: "og:type", content: "website" },
-    { property: "og:image", content: "/images/bg_hero.png" },
-  ]
-
-  ogTags.forEach((tag) => {
-    let meta = document.querySelector(`meta[property="${tag.property}"]`)
-    if (!meta) {
-      meta = document.createElement("meta")
-      meta.setAttribute("property", tag.property)
-      document.head.appendChild(meta)
-    }
-    meta.setAttribute("content", tag.content)
-  })
-
-  // Preload critical resources
-  const preloadLink = document.createElement("link")
-  preloadLink.rel = "preload"
-  preloadLink.href = "/images/bg_hero.png"
-  preloadLink.as = "image"
-  document.head.appendChild(preloadLink)
-
-  const preloadMobileLink = document.createElement("link")
-  preloadMobileLink.rel = "preload"
-  preloadMobileLink.href = "/images/bg_hero_mobile.png"
-  preloadMobileLink.as = "image"
-  preloadMobileLink.media = "(max-width: 768px)"
-  document.head.appendChild(preloadMobileLink)
-
-  // Add structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Dra. Bruna Lavalle - Psicologia Clínica",
-    description: "Atendimento psicológico especializado em TCC para ansiedade, depressão e relacionamentos",
-    url: window.location.href,
-    telephone: "+5561996626541",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "SGAS 915 Edifício Office Center",
-      addressLocality: "Brasília",
-      addressRegion: "DF",
-      addressCountry: "BR",
-    },
-    openingHours: "Mo-Fr 08:00-18:00",
-    priceRange: "$$",
-  }
-
-  const script = document.createElement("script")
-  script.type = "application/ld+json"
-  script.text = JSON.stringify(structuredData)
-  document.head.appendChild(script)
+      document.head.appendChild(script)
 
   return () => {
     document.head.removeChild(preloadLink)
     document.head.removeChild(preloadMobileLink)
     document.head.removeChild(script)
   }
-}, [])
-
+}, []) // ⬅️ Feche aqui o primeiro useEffect!
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
