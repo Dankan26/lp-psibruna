@@ -74,15 +74,36 @@ export default function DraBrunaLanding() {
     const script = document.createElement("script")
     script.type = "application/ld+json"
     script.text = JSON.stringify(structuredData)
-      document.head.appendChild(script)
+    document.head.appendChild(script)
 
-  return () => {
-    document.head.removeChild(preloadLink)
-    document.head.removeChild(preloadMobileLink)
-    document.head.removeChild(script)
-  }
-}, []) // ⬅️ Feche aqui o primeiro useEffect!
-  
+    // Load Elfsight script
+    const elfsightScript = document.createElement("script")
+    elfsightScript.src = "https://static.elfsight.com/platform/platform.js"
+    elfsightScript.async = true
+    document.head.appendChild(elfsightScript)
+
+    return () => {
+      document.head.removeChild(preloadLink)
+      document.head.removeChild(preloadMobileLink)
+      document.head.removeChild(script)
+      document.head.removeChild(elfsightScript)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Load Elfsight script manualmente
+    const elfsightScript = document.createElement("script")
+    elfsightScript.src = "https://static.elfsight.com/platform/platform.js"
+    elfsightScript.async = true
+    elfsightScript.defer = true
+    document.body.appendChild(elfsightScript)
+
+    return () => {
+      document.body.removeChild(elfsightScript)
+    }
+  }, [])
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
@@ -283,8 +304,28 @@ export default function DraBrunaLanding() {
                   <span>Agendar agora</span>
                 </a>
               </nav>
+      {/* Depoimentos - Elfsight Google Reviews */}
+      <section id="depoimentos" className="py-16 lg:py-24 relative">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2
+              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#152d28] mb-6"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              Histórias de Transformação
+            </h2>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            {/* Elfsight Google Reviews Widget */}
+            <div className="elfsight-app-f972e435-f03b-4179-89db-f9b20d70c877" data-elfsight-app-lazy></div>
+          </div>
+        </div>
+      </section>
+
+
             </div>
-          )}
+)}
         </div>
       </header>
 
@@ -696,7 +737,8 @@ export default function DraBrunaLanding() {
                 novas formas de lidar com eles.
               </p>
               <p>
-                Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática, científica e eficaz no tratamento da ansiedade, da depressão, fobias e no desenvolvimento de comportamentos para lidar com os conflitos em todos os tipos de relacionamentos.
+                Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática e eficaz no tratamento da
+                ansiedade, dos medos e dos conflitos em relacionamentos.
               </p>
               <p>
                 Juntas, vamos identificar os padrões que te machucam, reorganizar pensamentos e construir caminhos mais
@@ -851,9 +893,9 @@ export default function DraBrunaLanding() {
             {[
               {
                 icon: "/images/atendimento-icon.png",
-                title: "Atendimento Online",
+                title: "Atendimento online ou presencial",
                 description:
-                  " Sua terapia onde você estiver: sessões 100% online, no seu tempo e espaço.",
+                  "Escolha o formato que melhor se adapta à sua rotina: no conforto da sua casa ou no consultório.",
               },
               {
                 icon: "/images/abordagem-icon.png",
@@ -862,7 +904,7 @@ export default function DraBrunaLanding() {
               },
               {
                 icon: "/images/experiencia-icon.png",
-                title: "Dez anos de trajetória profissional",
+                title: "Mais de 7 anos de experiência",
                 description: "Histórico sólido de transformação na vida de adultos e idosos.",
               },
               {
@@ -932,7 +974,7 @@ export default function DraBrunaLanding() {
                   Com mais de 10 anos de experiência, ofereço um atendimento acolhedor, personalizado e seguro — um
                   espaço para você ser quem é, descobrir quem quer ser e viver em harmonia com a sua própria história.
                 </p>
-                <p>Atendimento de psicoterapia em Brasilia e online, para você que busca equilíbrio emocional e bem-estar.</p>
+                <p>Psicologia em Brasília e online, para você que busca equilíbrio emocional e bem-estar.</p>
               </div>
             </div>
 
@@ -966,7 +1008,7 @@ export default function DraBrunaLanding() {
 
           <div className="max-w-6xl mx-auto">
             {/* Elfsight Google Reviews Widget */}
-            <div className="elfsight-app-f972e435-f03b-4179-89db-f9b20d70c877"></div>
+            <div className="elfsight-app-f972e435-f03b-4179-89db-f9b20d70c877" data-elfsight-app-lazy></div>
           </div>
         </div>
       </section>
