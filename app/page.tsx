@@ -10,13 +10,13 @@ export default function DraBrunaLanding() {
 // Adicionar meta tags e otimizações SEO
 useEffect(() => {
   // Set page title and meta description
-  document.title = "Dra. Bruna Lavalle - Psicóloga Clínica | TCC em Brasília e Online"
+  document.title = "Dra. Bruna Lavalle - Psicóloga Clínica | TCC Online"
 
   const metaDescription = document.querySelector('meta[name="description"]')
   if (metaDescription) {
     metaDescription.setAttribute(
       "content",
-      "Psicóloga especializada em TCC para ansiedade, depressão e relacionamentos. Atendimento presencial em Brasília e online. Agende sua consulta.",
+      "Psicóloga especializada em TCC para ansiedade, depressão e relacionamentos. Atendimento Online. Agende sua consulta.",
     )
   }
 
@@ -178,7 +178,7 @@ const testimonials = [
     timeAgo: "um ano atrás",
   },
   {
-    name: "Adauto Bonifácio (adauto.bonifacio)",
+    name: "Adauto Bonifácio",
     rating: 5,
     text: "Sabe quando você consegue se conectar de verdade com seu terapeuta, perceber as mudanças que acontecem em sua vida a partir das mudanças no comportamento e ter a certeza de que está na direção certa? É exatamente essa a minha experiência …Mais🙏",
     timeAgo: "um ano atrás",
@@ -921,8 +921,7 @@ scrollbar-width: none;  /* Firefox */
               novas formas de lidar com eles.
             </p>
             <p>
-              Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática e eficaz no tratamento da
-              ansiedade, dos medos e dos conflitos em relacionamentos.
+              Trabalho com a Terapia Cognitivo-Comportamental (TCC), abordagem prática, científica e eficaz no tratamento da ansiedade, da depressão, fobias e no desenvolvimento de comportamentos para lidar com os conflitos em todos os tipos de relacionamentos.
             </p>
             <p>
               Juntas, vamos identificar os padrões que te machucam, reorganizar pensamentos e construir caminhos mais
@@ -1088,7 +1087,7 @@ scrollbar-width: none;  /* Firefox */
             },
             {
               icon: "/images/experiencia-icon.png",
-              title: "Mais de 7 anos de experiência",
+              title: "10 anos de experiência profissional",
               description: "Histórico sólido de transformação na vida de adultos e idosos.",
             },
             {
@@ -1158,7 +1157,7 @@ scrollbar-width: none;  /* Firefox */
                 Com mais de 10 anos de experiência, ofereço um atendimento acolhedor, personalizado e seguro — um
                 espaço para você ser quem é, descobrir quem quer ser e viver em harmonia com a sua própria história.
               </p>
-              <p>Psicologia em Brasília e online, para você que busca equilíbrio emocional e bem-estar.</p>
+              <p>Atendimento em psicoterapia online e todo o mundo, para você que busca equilíbrio emocional e bem-estar.</p>
             </div>
           </div>
 
@@ -1301,7 +1300,7 @@ scrollbar-width: none;  /* Firefox */
             </a>
 
             <p className="text-sm opacity-80 uppercase font-bold" style={{ fontFamily: "Georgia, serif" }}>
-              Atendimento exclusivamente particular — não aceitamos convênios.
+              ATENDIMENTO EXCLUSIVAMENTE PARTICULAR — NÃO ACEITAMOS CONVÊNIOS.
             </p>
           </div>
         </div>
@@ -1474,7 +1473,7 @@ scrollbar-width: none;  /* Firefox */
           />
 
           <p className="text-gray-300 text-lg" style={{ fontFamily: "Georgia, serif" }}>
-            Atendimento exclusivamente particular — não aceitamos convênios.
+            ATENDIMENTO EXCLUSIVAMENTE PARTICULAR — NÃO ACEITAMOS CONVÊNIOS.
           </p>
 
           <div className="border-t border-gray-700 pt-8">
