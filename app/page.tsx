@@ -75,19 +75,6 @@ export default function DraBrunaLanding() {
     script.type = "application/ld+json"
     script.text = JSON.stringify(structuredData)
     document.head.appendChild(script)
-
-    // Load Elfsight script
-    const elfsightScript = document.createElement("script")
-    elfsightScript.src = "https://static.elfsight.com/platform/platform.js"
-    elfsightScript.async = true
-    document.head.appendChild(elfsightScript)
-
-    return () => {
-      document.head.removeChild(preloadLink)
-      document.head.removeChild(preloadMobileLink)
-      document.head.removeChild(script)
-      document.head.removeChild(elfsightScript)
-    }
   }, [])
   useEffect(() => {
     const tryInitElfsight = () => {
