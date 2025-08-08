@@ -89,20 +89,29 @@ export default function DraBrunaLanding() {
       document.head.removeChild(elfsightScript)
     }
   }, [])
-
   useEffect(() => {
-    // Load Elfsight script manualmente
-    const elfsightScript = document.createElement("script")
-    elfsightScript.src = "https://static.elfsight.com/platform/platform.js"
-    elfsightScript.async = true
-    elfsightScript.defer = true
-    document.body.appendChild(elfsightScript)
+    const tryInitElfsight = () => {
+      // @ts-ignore
+      const win = window
+      if (win && win.elfsight && typeof win.elfsight.init === "function") {
+        try {
+          win.elfsight.init()
+        } catch (e) {
+          console.warn("Elfsight init error:", e)
+        }
+      }
+    }
 
-    return () => {
-      document.body.removeChild(elfsightScript)
+    // tenta rodar imediatamente
+    tryInitElfsight()
+
+    // tenta de novo quando o script carregar (caso ainda não esteja disponível)
+    const s = document.querySelector('script[src*="elfsight.com/platform"]') as HTMLScriptElement | null
+    if (s && !((window as any).elfsight)) {
+      s.addEventListener("load", tryInitElfsight)
+      return () => s.removeEventListener("load", tryInitElfsight)
     }
   }, [])
-
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
