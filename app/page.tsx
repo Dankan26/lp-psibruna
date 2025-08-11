@@ -209,7 +209,7 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" })
 }
 
-const whatsappUrl = "https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+const whatsappUrl = "https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
 
 // Carousel drag logic
 const carouselRef = useRef<HTMLDivElement>(null);
@@ -382,7 +382,7 @@ return (
     {/* WhatsApp Floating Button */}
     <div className="fixed bottom-6 right-6 z-50">
       <a
-        href="https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
         target="_blank"
         rel="noopener noreferrer"
         className="w-16 h-16 rounded-full bg-[#2a5951] hover:bg-[#1e3a33] text-white shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group relative"
@@ -435,7 +435,7 @@ return (
 
           <div className="flex items-center space-x-4">
             <a
-              href="https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center justify-center space-x-2 bg-[#2a5951] hover:bg-[#1e3a33] text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg transition-all duration-300"
@@ -478,7 +478,7 @@ return (
                 </button>
               ))}
               <a
-                href="https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 bg-[#2a5951] hover:bg-[#1e3a33] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold text-base md:text-lg mt-4 shadow-lg transition-all duration-300"
@@ -512,7 +512,7 @@ return (
               </p>
 
               <a
-                href="https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-hero"
@@ -1287,7 +1287,7 @@ scrollbar-width: none;  /* Firefox */
 
           <div className="space-y-6">
             <a
-              href="https://api.whatsapp.com/send/?phone=5561996626541&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5561996626541&text=Ol%C3%A1%21%20Tenho%20interesse%20nas%20consultas%20da%20Dra.%20Bruna%20e%20gostaria%20de%20saber%20mais%20detalhes.&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-2 bg-[#dc9650] hover:bg-[#c8854a] text-white px-6 py-3 rounded-full text-lg font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
