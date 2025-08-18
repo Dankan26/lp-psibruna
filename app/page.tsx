@@ -275,7 +275,7 @@ export default function DraBrunaLavallePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] leading-tight">
                 Cuidar das suas emoções
                 <br />
-                com leveza e segurança.
+                com leveza e segurança
               </h2>
 
               <div className="text-lg text-gray-700 leading-relaxed space-y-4">
@@ -524,7 +524,7 @@ export default function DraBrunaLavallePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] mb-6 leading-tight">
-                Mais que terapia, um cuidado que respeita sua essência.
+                Mais que terapia, um cuidado que respeita sua essência
               </h2>
             </div>
 
@@ -622,7 +622,7 @@ export default function DraBrunaLavallePage() {
           <div className="flex justify-end w-full">
             <div className="max-w-xl lg:max-w-2xl text-right">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#566b5a] mb-6 leading-tight">
-                Cuidar de você é minha missão.
+                Cuidar de você é minha missão
               </h2>
               <div className="text-lg sm:text-xl lg:text-2xl text-[#494949] leading-relaxed space-y-4">
                 <p>
