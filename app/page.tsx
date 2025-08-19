@@ -24,14 +24,67 @@ export default function DraBrunaLavallePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
-  const getWhatsAppLink = () => {
-    const phone = "5561996626541"
-    const preset = "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes."
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)
-    const waApi = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(preset)}&type=phone_number&app_absent=0`
-    const waDesktop = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(preset)}`
-    return isMobile ? waApi : waDesktop
+// SUBSTITUA a função existente
+const getWhatsAppLink = () => {
+  const phone = "5561996626541";
+  const preset =
+    "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes.";
+  const msg = encodeURIComponent(preset);
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|Windows Phone/i.test(
+    navigator.userAgent
+  );
+
+  // Mobile: mantém API (funcionando perfeitamente)
+  if (isMobile) {
+    return `https://api.whatsapp.com/send?phone=${phone}&text=${msg}&type=phone_number&app_absent=0`;
   }
+
+  // Desktop (fallback padrão do <a>): WhatsApp Web
+  return `https://web.whatsapp.com/send?phone=${phone}&text=${msg}`;
+};
+
+// ADICIONE abaixo da função acima
+const handleWhatsAppClick = (origin: string) => (e: React.MouseEvent) => {
+  const phone = "5561996626541";
+  const preset =
+    "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes.";
+  const msg = encodeURIComponent(preset);
+
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|Windows Phone/i.test(
+    navigator.userAgent
+  );
+  if (isMobile) {
+    // no mobile não fazemos nada: href já é a API e abre normal
+    return;
+  }
+
+  // DESKTOP: tenta app, se não tiver cai para web.whatsapp
+  e.preventDefault();
+
+  // envia evento para o GTM/GA4
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  (window as any).dataLayer.push({
+    event: "whatsapp_click",
+    button_location: origin,
+  });
+
+  const appUrl = `whatsapp://send?phone=${phone}&text=${msg}`;
+  const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${msg}`;
+
+  // Tenta abrir o app
+  const start = Date.now();
+  // usar location para tentar abrir o protocolo do app
+  window.location.href = appUrl;
+
+  // Se continuar na página (sem app), após ~1.2s, abre o Web WhatsApp
+  setTimeout(() => {
+    // se a aba ainda estiver visível e não houve navegação para o app
+    const elapsed = Date.now() - start;
+    if (document.visibilityState === "visible" || elapsed < 300) {
+      window.open(webUrl, "_self");
+    }
+  }, 1200);
+};
 
   const testimonials = [
     {
@@ -169,11 +222,12 @@ export default function DraBrunaLavallePage() {
     <div className="min-h-screen bg-white">
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href={getWhatsAppLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative bg-[#2a5951] hover:bg-[#152d28] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 block animate-pulse-scale"
-        >
+  href={getWhatsAppLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={handleWhatsAppClick("floating_button")}
+  className="group relative bg-[#2a5951] hover:bg-[#152d28] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 block animate-pulse-scale"
+>
           <svg className="w-6 h-6 text-white" viewBox="0 0 30.667 30.667" fill="currentColor">
             <path
               d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017
@@ -246,7 +300,12 @@ export default function DraBrunaLavallePage() {
             </div>
 
             <div className="mt-32 md:mt-0">
-              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a
+  href={getWhatsAppLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={handleWhatsAppClick("hero_cta")}
+>
                 <Button
                   size="lg"
                   className="bg-[#78907d] hover:bg-[#152d28] text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 rounded-full transition-all duration-300 hover:scale-105"
@@ -773,7 +832,12 @@ export default function DraBrunaLavallePage() {
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Toda mudança começa quando você decide cuidar de si. Estou aqui para caminhar ao seu lado nessa jornada.
           </p>
-          <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+          <a
+  href={getWhatsAppLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={handleWhatsAppClick("final_cta")}
+>
             <Button
               size="lg"
               className="bg-[#dc9650] hover:bg-[#dc9650]/80 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
@@ -872,7 +936,12 @@ export default function DraBrunaLavallePage() {
                 <CardContent>
                   <p className="text-gray-700 mb-4">+55 61 99662-6541</p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                    <a
+  href={getWhatsAppLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={handleWhatsAppClick("contacts_card")}
+>
                       <Button className="bg-[#516b5c] hover:bg-[#152d28] text-white transition-all duration-300 hover:scale-105">
                         Falar no WhatsApp
                       </Button>
