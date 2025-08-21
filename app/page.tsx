@@ -699,13 +699,9 @@ eficazes para recuperar propósito e bem-estar.
       {/* Sobre a Bruna */}
       <section className="py-20 lg:py-32 relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/bruna-4-bg.png')",
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-          }}
-        />
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+  style={{ backgroundImage: "url('/images/bruna-4-bg.png')", backgroundPosition: "center center", backgroundSize: "cover" }}
+/>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
           <div className="flex justify-end w-full">
@@ -729,7 +725,7 @@ eficazes para recuperar propósito e bem-estar.
           </div>
         </div>
         {/* CTA centralizado - Minha missão */}
-<div className="w-full flex justify-center mt-8 px-4">
+<div className="w-full flex justify-center mt-8 px-4 relative z-20">
   <a
     href={getWhatsAppLink()}
     target="_blank"
