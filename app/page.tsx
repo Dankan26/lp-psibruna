@@ -279,19 +279,18 @@ const handleWhatsAppClick = (origin: string) => (e: React.MouseEvent) => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#566b5a] mb-8 md:mb-4 leading-tight drop-shadow-sm mt-6 md:mt-0">
-              Quando a ansiedade sufoca e nada parece fazer sentido
+              Depressão e ansiedade estão roubando sua energia?
             </h1>
 
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#494949] mb-32 md:mb-6 leading-relaxed drop-shadow-sm max-w-lg">
               <p className="md:hidden tracking-wide leading-loose">
-                Você não precisa carregar esse peso
-                <br />
-                sozinha. Aqui, você encontra apoio,
-                <br />
-                clareza e estratégias para retomar
-                <br />o controle da sua vida e se sentir
-                <br />
-                em paz novamente.
+                Com a terapia online da Dra. Bruna Lavalle,
+<br />
+psicóloga especializada em saúde emocional, 
+<br />
+você terá acompanhamento próximo e ferramentas
+<br />
+eficazes para recuperar propósito e bem-estar.
               </p>
               <p className="hidden md:block">
                 Você não precisa carregar esse peso sozinha. Aqui, você encontra apoio, clareza e estratégias para
