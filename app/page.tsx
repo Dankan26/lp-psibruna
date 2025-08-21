@@ -724,22 +724,26 @@ eficazes para recuperar propósito e bem-estar.
             </div>
           </div>
         </div>
-        {/* CTA centralizado - Minha missão */}
-<div className="w-full flex justify-center mt-8 px-4 relative z-20">
-  <a
-    href={getWhatsAppLink()}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={handleWhatsAppClick("mission_cta")}
-  >
-    <Button
-      size="lg"
-      className="bg-[#78907d] hover:bg-[#152d28] text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 rounded-full transition-all duration-300 hover:scale-105"
-    >
-      <Leaf className="mr-2 w-5 md:w-6 h-5 md:h-6 scale-x-[-1]" />
-      Agendar agora
-    </Button>
-  </a>
+        {/* CTA – Minha missão (alinhado à direita da seção) */}
+<div className="relative z-20 mt-8">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full flex justify-end">
+      <a
+        href={getWhatsAppLink()}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleWhatsAppClick("mission_cta")}
+      >
+        <Button
+          size="lg"
+          className="!bg-[#78907d] hover:!bg-[#152d28] !text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 rounded-full transition-all duration-300 hover:scale-105"
+        >
+          <Leaf className="mr-2 w-5 md:w-6 h-5 md:h-6 scale-x-[-1]" />
+          Agendar agora
+        </Button>
+      </a>
+    </div>
+  </div>
 </div>
       </section>
 
