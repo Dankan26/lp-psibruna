@@ -291,13 +291,22 @@ const handleWhatsAppClick = (origin: string) => (e: React.MouseEvent) => {
 <br />
 psicóloga especializada em saúde emocional, 
 <br />
+você terá acompanhamento 
+<br />
+próximo e ferramentas
+<br />
+eficazes para recuperar
+<br />
+propósito e bem-estar.
+              </p>
+              <p className="hidden md:block">
+                Com a terapia online da Dra. Bruna Lavalle,
+<br />
+psicóloga especializada em saúde emocional, 
+<br />
 você terá acompanhamento próximo e ferramentas
 <br />
 eficazes para recuperar propósito e bem-estar.
-              </p>
-              <p className="hidden md:block">
-                Você não precisa carregar esse peso sozinha. Aqui, você encontra apoio, clareza e estratégias para
-                retomar o controle da sua vida e se sentir em paz novamente.
               </p>
             </div>
 
