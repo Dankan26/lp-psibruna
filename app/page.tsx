@@ -578,122 +578,123 @@ eficazes para recuperar propósito e bem-estar.
       </section>
 
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
-            <div className="flex flex-col justify-between">
-  <div>
-    <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] mb-6 leading-tight">
-      Mais que terapia, um cuidado que respeita sua essência
-    </h2>
-  </div>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+      {/* Coluna ESQUERDA */}
+      <div className="flex flex-col justify-between">
+        <div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] mb-6 leading-tight">
+            Mais que terapia, um cuidado que respeita sua essência
+          </h2>
+        </div>
 
-  {/* Card‑CTA alinhado ao final da coluna */}
-  <div className="mt-6">
-    <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg">
-      <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
-        Pronta para dar o primeiro passo da sua nova vida? Comece sua transformação
-        com apoio profissional, leveza e segurança.
-      </p>
+        {/* Card-CTA alinhado ao final da coluna */}
+        <div className="mt-6">
+          <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg">
+            <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
+              Pronta para dar o primeiro passo da sua nova vida? Comece sua transformação
+              com apoio profissional, leveza e segurança.
+            </p>
 
-      <div className="mt-4">
-        <a
-          href={getWhatsAppLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleWhatsAppClick("care_section_cta")}
-        >
-          <Button
-            size="lg"
-            className="bg-white text-[#152d28] hover:bg-white/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 hover:scale-105"
-          >
-            <Leaf className="mr-2 w-5 h-5 md:w-6 md:h-6 scale-x-[-1]" />
-            Agendar agora
-          </Button>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-            </div>
-
-            <div className="space-y-4">
-              {/* Atendimento online */}
-              <div className="group relative">
-                <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-[#152d28]" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">Atendimento online</h3>
-                </div>
-
-                <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <p className="text-gray-700 leading-relaxed">
-                    Com a comodidade do atendimento 100% online, você pode cuidar da sua saúde emocional de onde estiver
-                    — seja em casa, no trabalho ou viajando. As sessões são realizadas em ambiente virtual seguro,
-                    garantindo sigilo e privacidade, para que você possa falar sobre qualquer assunto com tranquilidade.
-                  </p>
-                </div>
-              </div>
-
-              {/* Abordagem personalizada */}
-              <div className="group relative">
-                <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <Users className="w-6 h-6 text-[#152d28]" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">Abordagem personalizada</h3>
-                </div>
-
-                <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <p className="text-gray-700 leading-relaxed">
-                    Cada pessoa é única, e por isso cada processo terapêutico é planejado de forma individual.
-                    Utilizando a Terapia Cognitivo-Comportamental (TCC) aliada a técnicas como mindfulness, PNL e
-                    hipnose clínica, Dra. Bruna adapta cada sessão para atender às suas necessidades e objetivos
-                    específicos, respeitando seu ritmo e sua história.
-                  </p>
-                </div>
-              </div>
-
-              {/* 10 anos de experiência */}
-              <div className="group relative">
-                <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <Star className="w-6 h-6 text-[#152d28]" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">10 anos de experiência profissional</h3>
-                </div>
-
-                <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <p className="text-gray-700 leading-relaxed">
-                    Com mais de uma década de atuação e centenas de pacientes atendidos, Dra. Bruna construiu um
-                    histórico sólido ajudando adultos e idosos a superarem desafios como ansiedade, depressão, fobias,
-                    crises existenciais e conflitos nos relacionamentos. Sua prática é baseada em evidências
-                    científicas, sempre com foco na transformação real da vida de cada paciente.
-                  </p>
-                </div>
-              </div>
-
-              {/* Ambiente seguro */}
-              <div className="group relative">
-                <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-[#152d28]" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">Ambiente seguro e sem julgamentos</h3>
-                </div>
-
-                <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <p className="text-gray-700 leading-relaxed">
-                    Este é um espaço onde você pode ser você mesma, sem máscaras ou medo de julgamento. A escuta ativa,
-                    o respeito e a empatia guiam todo o processo, garantindo que você se sinta acolhida e confiante para
-                    compartilhar suas dores, reflexões e conquistas. Aqui, cada passo é dado ao seu lado.
-                  </p>
-                </div>
-              </div>
+            <div className="mt-4">
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleWhatsAppClick("care_section_cta")}
+              >
+                <Button
+                  size="lg"
+                  className="bg-white text-[#152d28] hover:bg-white/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 hover:scale-105"
+                >
+                  <Leaf className="mr-2 w-5 h-5 md:w-6 md:h-6 scale-x-[-1]" />
+                  Agendar agora
+                </Button>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Coluna DIREITA (cards) */}
+      <div className="space-y-4">
+        {/* Atendimento online */}
+        <div className="group relative">
+          <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+              <MessageCircle className="w-6 h-6 text-[#152d28]" />
+            </div>
+            <h3 className="text-lg font-semibold text-white">Atendimento online</h3>
+          </div>
+
+          <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <p className="text-gray-700 leading-relaxed">
+              Com a comodidade do atendimento 100% online, você pode cuidar da sua saúde emocional de onde estiver
+              — seja em casa, no trabalho ou viajando. As sessões são realizadas em ambiente virtual seguro,
+              garantindo sigilo e privacidade, para que você possa falar sobre qualquer assunto com tranquilidade.
+            </p>
+          </div>
+        </div>
+
+        {/* Abordagem personalizada */}
+        <div className="group relative">
+          <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+              <Users className="w-6 h-6 text-[#152d28]" />
+            </div>
+            <h3 className="text-lg font-semibold text-white">Abordagem personalizada</h3>
+          </div>
+
+          <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <p className="text-gray-700 leading-relaxed">
+              Cada pessoa é única, e por isso cada processo terapêutico é planejado de forma individual.
+              Utilizando a Terapia Cognitivo-Comportamental (TCC) aliada a técnicas como mindfulness, PNL e
+              hipnose clínica, Dra. Bruna adapta cada sessão para atender às suas necessidades e objetivos
+              específicos, respeitando seu ritmo e sua história.
+            </p>
+          </div>
+        </div>
+
+        {/* 10 anos de experiência */}
+        <div className="group relative">
+          <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+              <Star className="w-6 h-6 text-[#152d28]" />
+            </div>
+            <h3 className="text-lg font-semibold text-white">10 anos de experiência profissional</h3>
+          </div>
+
+          <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <p className="text-gray-700 leading-relaxed">
+              Com mais de uma década de atuação e centenas de pacientes atendidos, Dra. Bruna construiu um
+              histórico sólido ajudando adultos e idosos a superarem desafios como ansiedade, depressão, fobias,
+              crises existenciais e conflitos nos relacionamentos. Sua prática é baseada em evidências
+              científicas, sempre com foco na transformação real da vida de cada paciente.
+            </p>
+          </div>
+        </div>
+
+        {/* Ambiente seguro */}
+        <div className="group relative">
+          <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 p-6 rounded-xl flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+              <Shield className="w-6 h-6 text-[#152d28]" />
+            </div>
+            <h3 className="text-lg font-semibold text-white">Ambiente seguro e sem julgamentos</h3>
+          </div>
+
+          <div className="absolute left-0 top-full mt-2 w-full bg-white border border-gray-200 rounded-xl p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <p className="text-gray-700 leading-relaxed">
+              Este é um espaço onde você pode ser você mesma, sem máscaras ou medo de julgamento. A escuta ativa,
+              o respeito e a empatia guiam todo o processo, garantindo que você se sinta acolhida e confiante para
+              compartilhar suas dores, reflexões e conquistas. Aqui, cada passo é dado ao seu lado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Sobre a Bruna */}
       <section className="py-20 lg:py-32 relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
