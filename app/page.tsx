@@ -31,19 +31,8 @@ const getWhatsAppLink = () => {
     "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes.";
   const msg = encodeURIComponent(preset);
 
-  // Fallback universal (funciona em tudo e mantém tracking quando o onClick não roda)
-  // Em iOS/Android com o app instalado, costuma deep-linkar para o app.
+  // Universal link — abre app no mobile (quando possível) e funciona no desktop (Web)
   return `https://wa.me/${phone}?text=${msg}`;
-};
-
-
-  // Mobile: mantém API (funcionando perfeitamente)
-  if (isMobile) {
-    return `https://api.whatsapp.com/send?phone=${phone}&text=${msg}&type=phone_number&app_absent=0`;
-  }
-
-  // Desktop (fallback padrão do <a>): WhatsApp Web
-  return `https://web.whatsapp.com/send?phone=${phone}&text=${msg}`;
 };
 
 // ADICIONE abaixo da função acima
