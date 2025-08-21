@@ -30,9 +30,12 @@ const getWhatsAppLink = () => {
   const preset =
     "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes.";
   const msg = encodeURIComponent(preset);
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|Windows Phone/i.test(
-    navigator.userAgent
-  );
+
+  // Fallback universal (funciona em tudo e mantém tracking quando o onClick não roda)
+  // Em iOS/Android com o app instalado, costuma deep-linkar para o app.
+  return `https://wa.me/${phone}?text=${msg}`;
+};
+
 
   // Mobile: mantém API (funcionando perfeitamente)
   if (isMobile) {
@@ -45,45 +48,45 @@ const getWhatsAppLink = () => {
 
 // ADICIONE abaixo da função acima
 const handleWhatsAppClick = (origin: string) => (e: React.MouseEvent) => {
+  e.preventDefault();
+
   const phone = "5561996626541";
   const preset =
     "Olá! Tenho interesse nas consultas da Dra. Bruna e gostaria de saber mais detalhes.";
   const msg = encodeURIComponent(preset);
 
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|Windows Phone/i.test(
-    navigator.userAgent
-  );
-  if (isMobile) {
-    // no mobile não fazemos nada: href já é a API e abre normal
-    return;
-  }
-
-  // DESKTOP: tenta app, se não tiver cai para web.whatsapp
-  e.preventDefault();
-
-  // envia evento para o GTM/GA4
+  // Tracking no GTM/GA4
   (window as any).dataLayer = (window as any).dataLayer || [];
   (window as any).dataLayer.push({
     event: "whatsapp_click",
     button_location: origin,
   });
 
+  const ua = navigator.userAgent || "";
+  const isiOS = /iPad|iPhone|iPod/i.test(ua);
+  const isAndroid = /Android/i.test(ua);
+
   const appUrl = `whatsapp://send?phone=${phone}&text=${msg}`;
   const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${msg}`;
+  const universalUrl = `https://wa.me/${phone}?text=${msg}`;
 
-  // Tenta abrir o app
-  const start = Date.now();
-  // usar location para tentar abrir o protocolo do app
-  window.location.href = appUrl;
+  // MOBILE: tenta abrir o APP primeiro; se falhar, cai no wa.me (abre o app via universal link)
+  if (isiOS || isAndroid) {
+    const start = Date.now();
+    // abrir no mesmo contexto evita bloqueios de popup
+    window.location.href = appUrl;
 
-  // Se continuar na página (sem app), após ~1.2s, abre o Web WhatsApp
-  setTimeout(() => {
-    // se a aba ainda estiver visível e não houve navegação para o app
-    const elapsed = Date.now() - start;
-    if (document.visibilityState === "visible" || elapsed < 300) {
-      window.open(webUrl, "_self");
-    }
-  }, 1200);
+    setTimeout(() => {
+      // Se ainda estamos na mesma aba, não houve navegação para o app
+      if (document.visibilityState === "visible" && Date.now() - start > 300) {
+        window.location.href = universalUrl;
+      }
+    }, 1200);
+    return;
+  }
+
+  // DESKTOP: vai direto para o WhatsApp Web
+  window.open(webUrl, "_self");
 };
 
   const testimonials = [
