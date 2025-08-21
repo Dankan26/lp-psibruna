@@ -426,8 +426,8 @@ eficazes para recuperar propósito e bem-estar.
                       <>
                         <div className="w-5/12 pr-8 relative">
                           <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                            <CardHeader className="text-center pb-4">
-                              <CardTitle className="text-xl text-[#152d28] mb-4">{card.title}</CardTitle>
+                            <CardHeader className="text-center pb-2">
+                              <CardTitle className="text-xl text-[#152d28] mb-2">{card.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
                               <p className="text-gray-700 text-center leading-relaxed">{card.description}</p>
@@ -467,8 +467,8 @@ eficazes para recuperar propósito e bem-estar.
                         </div>
                         <div className="w-5/12 pl-8 relative">
                           <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                            <CardHeader className="text-center pb-4">
-                              <CardTitle className="text-xl text-[#152d28] mb-4">{card.title}</CardTitle>
+                            <CardHeader className="text-center pb-2">
+                              <CardTitle className="text-xl text-[#152d28] mb-2">{card.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
                               <p className="text-gray-700 text-center leading-relaxed">{card.description}</p>
