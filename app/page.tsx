@@ -579,38 +579,41 @@ eficazes para recuperar propósito e bem-estar.
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] mb-6 leading-tight">
-                Mais que terapia, um cuidado que respeita sua essência
-              </h2>
-              {/* Card-CTA alinhado à largura do título */}
-<div className="mt-4">
-  <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg">
-    <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
-      Pronta para dar o primeiro passo da sua nova vida? 
-      Comece sua transformação com apoio profissional, leveza e segurança.
-    </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            <div className="flex flex-col justify-between">
+  <div>
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#152d28] mb-6 leading-tight">
+      Mais que terapia, um cuidado que respeita sua essência
+    </h2>
+  </div>
 
-    <div className="mt-4">
-      <a
-        href={getWhatsAppLink()}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={handleWhatsAppClick("care_section_cta")}
-      >
-        <Button
-          size="lg"
-          className="bg-white text-[#152d28] hover:bg-white/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 hover:scale-105"
+  {/* Card‑CTA alinhado ao final da coluna */}
+  <div className="mt-6">
+    <div className="bg-gradient-to-r from-[#152d28] to-[#152d28]/80 rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg">
+      <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
+        Pronta para dar o primeiro passo da sua nova vida? Comece sua transformação
+        com apoio profissional, leveza e segurança.
+      </p>
+
+      <div className="mt-4">
+        <a
+          href={getWhatsAppLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleWhatsAppClick("care_section_cta")}
         >
-          <Leaf className="mr-2 w-5 h-5 md:w-6 md:h-6 scale-x-[-1]" />
-          Agendar agora
-        </Button>
-      </a>
+          <Button
+            size="lg"
+            className="bg-white text-[#152d28] hover:bg-white/90 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 hover:scale-105"
+          >
+            <Leaf className="mr-2 w-5 h-5 md:w-6 md:h-6 scale-x-[-1]" />
+            Agendar agora
+          </Button>
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
             </div>
 
             <div className="space-y-4">
@@ -741,7 +744,6 @@ eficazes para recuperar propósito e bem-estar.
     </Button>
   </a>
 </div>
-
       </section>
 
       {/* Depoimentos */}
