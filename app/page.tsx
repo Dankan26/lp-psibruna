@@ -319,7 +319,7 @@ eficazes para recuperar propósito e bem-estar.
         </div>
       </section>
 
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section id="tcc" className="py-20 bg-white relative overflow-hidden scroll-mt-24">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
           style={{
@@ -398,7 +398,7 @@ eficazes para recuperar propósito e bem-estar.
         </div>
       </section>
 
-      <section className="py-20 bg-[#516b5c] relative overflow-hidden">
+      <section id="ajuda" className="py-20 bg-[#516b5c] relative overflow-hidden scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -578,7 +578,7 @@ eficazes para recuperar propósito e bem-estar.
         `}</style>
       </section>
 
-      <section className="py-20 bg-white">
+      <section id="online" className="py-20 bg-white scroll-mt-24">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-16 items-stretch">
       {/* Coluna ESQUERDA */}
@@ -872,7 +872,7 @@ eficazes para recuperar propósito e bem-estar.
       </section>
 
       {/* Chamada final */}
-      <section className="py-20 bg-gradient-to-r from-[#516b5c] to-[#516b5c]/80">
+      <section id="agendar" className="py-20 bg-gradient-to-r from-[#516b5c] to-[#516b5c]/80 scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Pronto para dar o primeiro passo para sua transformação?
